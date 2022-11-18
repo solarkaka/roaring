@@ -1,8 +1,8 @@
-roaring [![GoDoc](https://godoc.org/github.com/RoaringBitmap/roaring/roaring64?status.svg)](https://godoc.org/github.com/RoaringBitmap/roaring/roaring64) [![Go Report Card](https://goreportcard.com/badge/RoaringBitmap/roaring)](https://goreportcard.com/report/github.com/RoaringBitmap/roaring)
+roaring [![GoDoc](https://godoc.org/github.com/solarkaka/roaring/roaring64?status.svg)](https://godoc.org/github.com/solarkaka/roaring/roaring64) [![Go Report Card](https://goreportcard.com/badge/RoaringBitmap/roaring)](https://goreportcard.com/report/github.com/solarkaka/roaring)
 [![Build Status](https://cloud.drone.io/api/badges/RoaringBitmap/roaring/status.svg)](https://cloud.drone.io/RoaringBitmap/roaring)
-![Go-CI](https://github.com/RoaringBitmap/roaring/workflows/Go-CI/badge.svg)
-![Go-ARM-CI](https://github.com/RoaringBitmap/roaring/workflows/Go-ARM-CI/badge.svg)
-![Go-Windows-CI](https://github.com/RoaringBitmap/roaring/workflows/Go-Windows-CI/badge.svg)
+![Go-CI](https://github.com/solarkaka/roaring/workflows/Go-CI/badge.svg)
+![Go-ARM-CI](https://github.com/solarkaka/roaring/workflows/Go-ARM-CI/badge.svg)
+![Go-Windows-CI](https://github.com/solarkaka/roaring/workflows/Go-Windows-CI/badge.svg)
 =============
 
 This is a go version of the Roaring bitmap data structure. 
@@ -46,8 +46,8 @@ The ``roaring`` Go library is used by
 This library is used in production in several systems, it is part of the [Awesome Go collection](https://awesome-go.com).
 
 
-There are also  [Java](https://github.com/RoaringBitmap/RoaringBitmap) and [C/C++](https://github.com/RoaringBitmap/CRoaring) versions.  The Java, C, C++ and Go version are binary compatible: e.g,  you can save bitmaps
-from a Java program and load them back in Go, and vice versa. We have a [format specification](https://github.com/RoaringBitmap/RoaringFormatSpec).
+There are also  [Java](https://github.com/solarkaka/roaringBitmap) and [C/C++](https://github.com/RoaringBitmap/CRoaring) versions.  The Java, C, C++ and Go version are binary compatible: e.g,  you can save bitmaps
+from a Java program and load them back in Go, and vice versa. We have a [format specification](https://github.com/solarkaka/roaringFormatSpec).
 
 
 This code is licensed under Apache License, Version 2.0 (ASL2.0).
@@ -165,7 +165,7 @@ Note that the smat library requires Go 1.6 or better.
 
 #### Installation
 
-  - go get -t github.com/RoaringBitmap/roaring
+  - go get -t github.com/solarkaka/roaring
 
 
 ### Example
@@ -177,7 +177,7 @@ package main
 
 import (
     "fmt"
-    "github.com/RoaringBitmap/roaring"
+    "github.com/solarkaka/roaring"
     "bytes"
 )
 
@@ -269,7 +269,7 @@ package main
 
 import (
     "fmt"
-    "github.com/RoaringBitmap/roaring/roaring64"
+    "github.com/solarkaka/roaring/roaring64"
     "bytes"
 )
 
@@ -322,7 +322,7 @@ Only the 32-bit roaring format is standard and cross-operable between Java, C++,
 
 ### Documentation
 
-Current documentation is available at http://godoc.org/github.com/RoaringBitmap/roaring and http://godoc.org/github.com/RoaringBitmap/roaring64
+Current documentation is available at http://godoc.org/github.com/solarkaka/roaring and http://godoc.org/github.com/solarkaka/roaring64
 
 ### Goroutine safety
 
@@ -360,12 +360,12 @@ You can use roaring with gore:
 
 - go get -u github.com/motemen/gore
 - Make sure that ``$GOPATH/bin`` is in your ``$PATH``.
-- go get github.com/RoaringBitmap/roaring
+- go get github.com/solarkaka/roaring
 
 ```go
 $ gore
 gore version 0.2.6  :help for help
-gore> :import github.com/RoaringBitmap/roaring
+gore> :import github.com/solarkaka/roaring
 gore> x:=roaring.New()
 gore> x.Add(1)
 gore> x.String()
@@ -380,7 +380,7 @@ You can help us test further the library with fuzzy testing:
          go get github.com/dvyukov/go-fuzz/go-fuzz
          go get github.com/dvyukov/go-fuzz/go-fuzz-build
          go test -tags=gofuzz -run=TestGenerateSmatCorpus
-         go-fuzz-build github.com/RoaringBitmap/roaring
+         go-fuzz-build github.com/solarkaka/roaring
          go-fuzz -bin=./roaring-fuzz.zip -workdir=workdir/ -timeout=200 -func FuzzSmat
 
 Let it run, and if the # of crashers is > 0, check out the reports in

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/RoaringBitmap/roaring/internal"
+	"github.com/solarkaka/roaring/internal"
 	"github.com/stretchr/testify/assert"
 )
 

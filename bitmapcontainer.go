@@ -1061,8 +1061,7 @@ func (bc *bitmapContainer) PrevSetBit(i int) int {
 }
 
 // reference the java implementation
-// https://github.com/RoaringBitmap/RoaringBitmap/blob/master/src/main/java/org/roaringbitmap/BitmapContainer.java#L875-L892
-//
+// https://github.com/solarkaka/roaringBitmap/blob/master/src/main/java/org/roaringbitmap/BitmapContainer.java#L875-L892
 func (bc *bitmapContainer) numberOfRuns() int {
 	if bc.cardinality == 0 {
 		return 0
